@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -9,7 +10,7 @@ using Utils.CsvReaderWriter.Interfaces;
 
 namespace Utils.CsvReaderWriter
 {
-    public class CSVWriter<T> : ICSVWriter<T>
+    public class CSVWriter<T> : ICSVWriter<T>, IDisposable
     {
         private static readonly string DELIMITER = ",";
         private readonly StreamWriter _writer;

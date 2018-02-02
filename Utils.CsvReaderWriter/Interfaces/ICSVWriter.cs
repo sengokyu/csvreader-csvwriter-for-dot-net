@@ -5,7 +5,7 @@ namespace Utils.CsvReaderWriter.Interfaces
     /// <summary>
     /// Write object to the stream as CSV
     /// </summary>
-    public interface ICSVWriter<T> : IDisposable
+    public interface ICSVWriter<T>
     {
         /// <summary>
         /// Write a header line
