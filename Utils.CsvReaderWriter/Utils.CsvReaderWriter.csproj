@@ -43,6 +43,7 @@
     <Compile Include="Attributes\CSVColumnAttribute.cs" />
     <Compile Include="CSVReader.cs" />
     <Compile Include="CSVWriter.cs" />
+    <Compile Include="Interfaces\ICSVReader.cs" />
     <Compile Include="Interfaces\ICSVWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

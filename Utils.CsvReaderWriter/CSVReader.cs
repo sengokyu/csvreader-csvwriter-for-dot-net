@@ -4,13 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Utils.CsvReaderWriter.Interfaces;
 
 namespace Utils.CsvReaderWriter
 {
     /// <summary>
     /// generic CSV reader
     /// </summary>
-    public class CSVReader : IDisposable
+    public class CSVReader : ICSVReader, IDisposable
     {
         private static readonly string END_OF_FILE = "\x1a";
         private static readonly string DELIMITER = "\"";
