@@ -8,7 +8,7 @@ This is simple CSV reading/writing implementation.
 
 - Read and write Excel style CSV.
 - Quoted value supported.
-- Lines in value supported.
+- Lines/Quotes/Commas in value supported.
 
 
 ## Usage
