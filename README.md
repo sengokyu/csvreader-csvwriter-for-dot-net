@@ -38,10 +38,10 @@ class SampleBean
 {
         public string Ignored { get; set; }
 
-        [CSVColumn(1)]
+        [CSVColumn(1)] // The number is column order
         public string Column1 { get; set; }
 
-        [CSVColumn(2, Name = "Custom, \"Name")]
+        [CSVColumn(2, Name = "Custom, \"Name")] // Customize header line
         public string Column2 { get; set; }
 
         [CSVColumn(3)]
@@ -52,9 +52,9 @@ class SampleBean
 ```Csharp:CSVWriterUsage.cs
 var bean1 = new SampleBean()
 {
-	Column1 = "value1",
-	Column2 = "value\nvalue,value\"",
-	MyNumber = 1234,
+	Column1 = "value1",                // Simple string value
+	Column2 = "value\nvalue,value\"",  // String value can contain new lines and quotes.
+	MyNumber = 1234,                   // Simple numeric value
 };
    
 using (var writer = new CSVWriter<SampleBean>(stream, new UTF8Encoding(false)))
